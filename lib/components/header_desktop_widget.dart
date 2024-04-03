@@ -53,9 +53,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
               borderRadius: BorderRadius.circular(8.0),
               child: Image.asset(
                 'assets/images/image-removebg-preview.png',
-                width: MediaQuery.sizeOf(context).width * 0.095,
-                height: MediaQuery.sizeOf(context).height * 0.057,
-                fit: BoxFit.fitWidth,
+                width: 150.0,
+                height: 50.0,
+                fit: BoxFit.fill,
               ),
             ),
             Expanded(
@@ -120,20 +120,26 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                 ),
               ),
             ),
-            FlutterFlowIconButton(
-              borderColor: FlutterFlowTheme.of(context).primary,
-              borderRadius: 0.0,
-              borderWidth: 1.0,
-              buttonSize: MediaQuery.sizeOf(context).width * 0.025,
-              fillColor: Colors.black,
-              icon: const Icon(
-                Icons.search,
-                color: Colors.white,
-                size: 40.0,
+            Align(
+              alignment: const AlignmentDirectional(0.0, 0.0),
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                child: FlutterFlowIconButton(
+                  borderColor: FlutterFlowTheme.of(context).primary,
+                  borderRadius: 0.0,
+                  borderWidth: 1.0,
+                  buttonSize: 40.0,
+                  fillColor: Colors.black,
+                  icon: const Icon(
+                    Icons.search,
+                    color: Colors.white,
+                    size: 35.0,
+                  ),
+                  onPressed: () {
+                    print('sreachButton pressed ...');
+                  },
+                ),
               ),
-              onPressed: () {
-                print('sreachButton pressed ...');
-              },
             ),
             Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 200.0, 0.0),
@@ -194,7 +200,6 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                 children: [
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.11,
-                    height: MediaQuery.sizeOf(context).height * 0.04,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
@@ -211,7 +216,6 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                   ),
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.11,
-                    height: MediaQuery.sizeOf(context).height * 0.04,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
@@ -228,7 +232,6 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                   ),
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.11,
-                    height: MediaQuery.sizeOf(context).height * 0.04,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
@@ -245,7 +248,6 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                   ),
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.11,
-                    height: MediaQuery.sizeOf(context).height * 0.04,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
@@ -262,7 +264,6 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                   ),
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.11,
-                    height: MediaQuery.sizeOf(context).height * 0.04,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
@@ -279,7 +280,6 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                   ),
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.11,
-                    height: MediaQuery.sizeOf(context).height * 0.04,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
@@ -296,7 +296,6 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                   ),
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.11,
-                    height: MediaQuery.sizeOf(context).height * 0.04,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
