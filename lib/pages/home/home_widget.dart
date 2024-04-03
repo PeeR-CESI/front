@@ -342,8 +342,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                 decoration: const BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/457/600',
+                                                child: Image.asset(
+                                                  'assets/images/office-1730939.jpg',
                                                   fit: BoxFit.cover,
                                                 ),
                                               ),
