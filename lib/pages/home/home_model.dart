@@ -6,10 +6,6 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for screachtext widget.
-  FocusNode? screachtextFocusNode;
-  TextEditingController? screachtextController;
-  String? Function(BuildContext, String?)? screachtextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -17,7 +13,5 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    screachtextFocusNode?.dispose();
-    screachtextController?.dispose();
   }
 }
