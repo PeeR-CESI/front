@@ -1,25 +1,9 @@
-ARG BASE_REGISTRY
+FROM nginx:alpine
 
-FROM ${BASE_REGISTRY}python:3.12-alpine3.19 as base
+RUN rm -rf /usr/share/nginx/html/*
 
-ENV TZ="Europe/Paris"
+COPY build/web /usr/share/nginx/html
 
-RUN --mount=type=cache,target=/var/cache/apk \
-    apk update --no-cache && \
-    apk upgrade --no-cache && \
-    apk add --no-cache --update \
-    git \
-    curl \
-    bash \
-    jq \
-    yq \
-    moreutils \
-    util-linux \
-    ca-certificates \
-    tzdata && \
-    cp /usr/share/zoneinfo/${TZ} /etc/localtime
+EXPOSE 80
 
-RUN --mount=type=cache,target=/var/cache/apk \
-    apk add --no-cache --update --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community" \
-    helm \
-    github-cli
+RUN echo 'server { listen 80; location / { root /usr/share/nginx/html; try_files $uri $uri/ /index.html; } }' > /etc/nginx/conf.d/default.conf
