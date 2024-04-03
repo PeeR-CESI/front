@@ -311,8 +311,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       ClipRRect(
                                         borderRadius:
                                             BorderRadius.circular(20.0),
-                                        child: Image.network(
-                                          'https://picsum.photos/seed/922/600',
+                                        child: Image.asset(
+                                          'assets/images/P_20230612_091524.jpg',
                                           width: 269.0,
                                           height: 200.0,
                                           fit: BoxFit.cover,
@@ -494,8 +494,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text(
+                        AutoSizeText(
                           'Get inspired by community on Peer',
+                          maxLines: 1,
                           style: GoogleFonts.getFont(
                             'Inter',
                             fontWeight: FontWeight.w600,
