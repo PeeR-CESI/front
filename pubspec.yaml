@@ -27,14 +27,8 @@ dependencies:
     sdk: flutter
   auto_size_text: 3.0.0
   cached_network_image: 3.3.1
-  cloud_firestore: 4.15.10
-  cloud_firestore_platform_interface: 6.1.11
-  cloud_firestore_web: 3.10.10
   collection: 1.18.0
   equatable: 2.0.5
-  firebase_core: 2.27.2
-  firebase_core_platform_interface: 5.0.0
-  firebase_core_web: 2.13.0
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.1
   font_awesome_flutter: 10.6.0
@@ -50,7 +44,6 @@ dependencies:
   path_provider_android: 2.0.25
   path_provider_foundation: 2.2.2
   path_provider_platform_interface: 2.0.6
-  plugin_platform_interface: 2.1.8
   provider: 6.0.5
   shared_preferences: 2.2.2
   shared_preferences_android: 2.2.1
@@ -58,7 +51,6 @@ dependencies:
   shared_preferences_platform_interface: 2.3.1
   shared_preferences_web: 2.2.1
   sqflite: 2.2.6
-  stream_transform: 2.1.0
   timeago: 3.2.2
   url_launcher: 6.2.5
   url_launcher_android: 6.3.0

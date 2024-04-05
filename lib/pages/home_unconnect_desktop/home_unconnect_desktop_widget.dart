@@ -69,182 +69,189 @@ class _HomeUnconnectDesktopWidgetState
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: Image.asset(
-                                'assets/images/image-removebg-preview.png',
-                                width: 300.0,
-                                height: 100.0,
-                                fit: BoxFit.fitWidth,
+                        if (MediaQuery.sizeOf(context).width > 1100.0)
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(
+                                  'assets/images/image-removebg-preview.png',
+                                  width: 300.0,
+                                  height: 100.0,
+                                  fit: BoxFit.fitWidth,
+                                ),
                               ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
-                                  },
-                                  text: 'Peer Pro',
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0x004B39EF),
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 24.0,
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () {
+                                      print('Button pressed ...');
+                                    },
+                                    text: 'Peer Pro',
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: const Color(0x004B39EF),
+                                      textStyle: GoogleFonts.getFont(
+                                        'Inter',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 24.0,
+                                      ),
+                                      elevation: 0.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 0.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 0.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                ),
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed('auth_2_Login');
-                                  },
-                                  text: 'Explore',
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0x004B39EF),
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 24.0,
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed('auth_2_Login');
+                                    },
+                                    text: 'Explore',
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: const Color(0x004B39EF),
+                                      textStyle: GoogleFonts.getFont(
+                                        'Inter',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 24.0,
+                                      ),
+                                      elevation: 0.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 0.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 0.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                ),
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed('auth_2_Login');
-                                  },
-                                  text: 'English',
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0x004B39EF),
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 24.0,
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed('auth_2_Login');
+                                    },
+                                    text: 'English',
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: const Color(0x004B39EF),
+                                      textStyle: GoogleFonts.getFont(
+                                        'Inter',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 24.0,
+                                      ),
+                                      elevation: 0.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 0.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 0.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                ),
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed('auth_2_Login');
-                                  },
-                                  text: 'Seller',
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0x004B39EF),
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 24.0,
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed('auth_2_Login');
+                                    },
+                                    text: 'Seller',
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: const Color(0x004B39EF),
+                                      textStyle: GoogleFonts.getFont(
+                                        'Inter',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 24.0,
+                                      ),
+                                      elevation: 0.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 0.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 0.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                ),
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed('auth_2_Login');
-                                  },
-                                  text: 'Sign In',
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0x004B39EF),
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 24.0,
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed('auth_2_Login');
+                                    },
+                                    text: 'Sign In',
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: const Color(0x004B39EF),
+                                      textStyle: GoogleFonts.getFont(
+                                        'Inter',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 24.0,
+                                      ),
+                                      elevation: 0.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 0.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 0.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                ),
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    context.pushNamed('auth_2_Login');
-                                  },
-                                  text: 'Join',
-                                  options: FFButtonOptions(
-                                    height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0x004B39EF),
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 24.0,
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed('auth_2_Login');
+                                    },
+                                    text: 'Join',
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: const Color(0x004B39EF),
+                                      textStyle: GoogleFonts.getFont(
+                                        'Inter',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 24.0,
+                                      ),
+                                      elevation: 0.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 0.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 0.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                                ],
+                              ),
+                            ],
+                          ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               113.0, 100.0, 113.0, 0.0),
