@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '/backend/schema/structs/index.dart';
+
 import '/auth/custom_auth/custom_auth_user_provider.dart';
 
 import '/index.dart';
@@ -84,7 +86,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'home',
-          path: '/home',
+          path: '/welcome',
           requireAuth: true,
           builder: (context, params) => const HomeWidget(),
         ),
@@ -105,8 +107,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'HomeUnconnectDesktop',
-          path: '/homeUnconnectDesktop',
+          path: '/HomeUnconnectDesktop',
           builder: (context, params) => const HomeUnconnectDesktopWidget(),
+        ),
+        FFRoute(
+          name: 'Recherche',
+          path: '/recherche',
+          builder: (context, params) => const RechercheWidget(),
+        ),
+        FFRoute(
+          name: 'Service',
+          path: '/service',
+          builder: (context, params) => const ServiceWidget(),
+        ),
+        FFRoute(
+          name: 'Account',
+          path: '/account',
+          builder: (context, params) => const AccountWidget(),
+        ),
+        FFRoute(
+          name: 'Message',
+          path: '/message',
+          builder: (context, params) => const MessageWidget(),
+        ),
+        FFRoute(
+          name: 'ServiceCopy',
+          path: '/ServiceCopy',
+          builder: (context, params) => ServiceCopyWidget(
+            test: params.getParam(
+              'test',
+              ParamType.bool,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -183,7 +215,7 @@ extension _GoRouterStateExtensions on GoRouterState {
       extra != null ? extra as Map<String, dynamic> : {};
   Map<String, dynamic> get allParams => <String, dynamic>{}
     ..addAll(pathParameters)
-    ..addAll(queryParameters)
+    ..addAll(uri.queryParameters)
     ..addAll(extraMap);
   TransitionInfo get transitionInfo => extraMap.containsKey(kTransitionInfoKey)
       ? extraMap[kTransitionInfoKey] as TransitionInfo
@@ -202,7 +234,7 @@ class FFParameters {
   // present is the special extra parameter reserved for the transition info.
   bool get isEmpty =>
       state.allParams.isEmpty ||
-      (state.extraMap.length == 1 &&
+      (state.allParams.length == 1 &&
           state.extraMap.containsKey(kTransitionInfoKey));
   bool isAsyncParam(MapEntry<String, dynamic> param) =>
       asyncParams.containsKey(param.key) && param.value is String;
@@ -223,9 +255,10 @@ class FFParameters {
 
   dynamic getParam<T>(
     String paramName,
-    ParamType type, [
+    ParamType type, {
     bool isList = false,
-  ]) {
+    StructBuilder<T>? structBuilder,
+  }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
     }
@@ -242,6 +275,7 @@ class FFParameters {
       param,
       type,
       isList,
+      structBuilder: structBuilder,
     );
   }
 }
@@ -274,8 +308,8 @@ class FFRoute {
           }
 
           if (requireAuth && !appStateNotifier.loggedIn) {
-            appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/homeUnconnectDesktop';
+            appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
+            return '/HomeUnconnectDesktop';
           }
           return null;
         },
@@ -353,7 +387,7 @@ class RootPageContext {
   static bool isInactiveRootPage(BuildContext context) {
     final rootPageContext = context.read<RootPageContext?>();
     final isRootPage = rootPageContext?.isRootPage ?? false;
-    final location = GoRouter.of(context).location;
+    final location = GoRouterState.of(context).uri.toString();
     return isRootPage &&
         location != '/' &&
         location != rootPageContext?.errorRoute;
