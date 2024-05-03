@@ -7,8 +7,8 @@ class HeaderDesktopModel extends FlutterFlowModel<HeaderDesktopWidget> {
 
   // State field(s) for screachtext widget.
   FocusNode? screachtextFocusNode;
-  TextEditingController? screachtextController;
-  String? Function(BuildContext, String?)? screachtextControllerValidator;
+  TextEditingController? screachtextTextController;
+  String? Function(BuildContext, String?)? screachtextTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -16,6 +16,6 @@ class HeaderDesktopModel extends FlutterFlowModel<HeaderDesktopWidget> {
   @override
   void dispose() {
     screachtextFocusNode?.dispose();
-    screachtextController?.dispose();
+    screachtextTextController?.dispose();
   }
 }

@@ -1,9 +1,9 @@
+import '/components/messag_box_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'home_unconnect_desktop_widget.dart' show HomeUnconnectDesktopWidget;
+import 'message_widget.dart' show MessageWidget;
 import 'package:flutter/material.dart';
 
-class HomeUnconnectDesktopModel
-    extends FlutterFlowModel<HomeUnconnectDesktopWidget> {
+class MessageModel extends FlutterFlowModel<MessageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -11,14 +11,20 @@ class HomeUnconnectDesktopModel
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // Model for MessagBox component.
+  late MessagBoxModel messagBoxModel;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    messagBoxModel = createModel(context, () => MessagBoxModel());
+  }
 
   @override
   void dispose() {
     unfocusNode.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
+
+    messagBoxModel.dispose();
   }
 }

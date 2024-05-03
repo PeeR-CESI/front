@@ -16,16 +16,24 @@ class ConnectionGroup {
 }
 
 class CreationCompteCall {
-  Future<ApiCallResponse> call() async {
-    const ffApiRequestBody = '''
+  Future<ApiCallResponse> call({
+    String? nom = '',
+    String? prenom = '',
+    String? email = '',
+    String? adresse = '',
+    String? role = '',
+    String? username = '',
+    String? password = '',
+  }) async {
+    final ffApiRequestBody = '''
 {
-    "nom": "Doe", 
-    "prenom": "Moha", 
-    "email": "Moha.doe@example.com", 
-    "adresse": "123 Rue Exemple",
-    "role": "demandeur",
-    "username": "moh",
-    "password": "password"
+  "nom": "$nom",
+  "prenom": "$prenom",
+  "email": "$email",
+  "adresse": "$adresse",
+  "role": "$role",
+  "username": "$username",
+  "password": "$password"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'creation compte',
@@ -45,16 +53,14 @@ class CreationCompteCall {
 }
 
 class LoginCall {
-  Future<ApiCallResponse> call() async {
+  Future<ApiCallResponse> call({
+    String? password = '',
+    String? username = '',
+  }) async {
     const ffApiRequestBody = '''
 {
-    "nom": "Doe", 
-    "prenom": "Moha", 
-    "email": "Moha.doe@example.com", 
-    "adresse": "123 Rue Exemple",
-    "role": "demandeur",
-    "username": "moh",
-    "password": "password"
+  "password": "string",
+  "username": "string"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'login',

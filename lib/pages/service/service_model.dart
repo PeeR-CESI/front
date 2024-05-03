@@ -1,9 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'home_unconnect_desktop_widget.dart' show HomeUnconnectDesktopWidget;
+import 'service_widget.dart' show ServiceWidget;
 import 'package:flutter/material.dart';
 
-class HomeUnconnectDesktopModel
-    extends FlutterFlowModel<HomeUnconnectDesktopWidget> {
+class ServiceModel extends FlutterFlowModel<ServiceWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

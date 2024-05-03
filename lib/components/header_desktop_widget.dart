@@ -28,7 +28,7 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
     super.initState();
     _model = createModel(context, () => HeaderDesktopModel());
 
-    _model.screachtextController ??= TextEditingController();
+    _model.screachtextTextController ??= TextEditingController();
     _model.screachtextFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -64,12 +64,14 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                 child: SizedBox(
                   width: MediaQuery.sizeOf(context).width * 0.1,
                   child: TextFormField(
-                    controller: _model.screachtextController,
+                    controller: _model.screachtextTextController,
                     focusNode: _model.screachtextFocusNode,
                     autofocus: true,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Label here...',
+                      labelText: FFLocalizations.of(context).getText(
+                        'e0woq6dp' /* Label here... */,
+                      ),
                       labelStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
                                 fontFamily: 'Readex Pro',
@@ -113,8 +115,7 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    minLines: null,
-                    validator: _model.screachtextControllerValidator
+                    validator: _model.screachtextTextControllerValidator
                         .asValidator(context),
                   ),
                 ),
@@ -152,7 +153,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
             Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 0.0),
               child: AutoSizeText(
-                'Peerers',
+                FFLocalizations.of(context).getText(
+                  '8svxub2v' /* Peerers */,
+                ),
                 style: GoogleFonts.getFont(
                   'Inter',
                   fontWeight: FontWeight.w600,
@@ -204,7 +207,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: AutoSizeText(
-                      'Digital',
+                      FFLocalizations.of(context).getText(
+                        '3hdpim59' /* Digital */,
+                      ),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Inter',
@@ -220,7 +225,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: AutoSizeText(
-                      'Digital',
+                      FFLocalizations.of(context).getText(
+                        '8vuoyo7z' /* Digital */,
+                      ),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Inter',
@@ -236,7 +243,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: AutoSizeText(
-                      'Digital',
+                      FFLocalizations.of(context).getText(
+                        'xgkdtqg4' /* Digital */,
+                      ),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Inter',
@@ -252,7 +261,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: AutoSizeText(
-                      'Digital',
+                      FFLocalizations.of(context).getText(
+                        'tq83t55d' /* Digital */,
+                      ),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Inter',
@@ -268,7 +279,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: AutoSizeText(
-                      'Digital',
+                      FFLocalizations.of(context).getText(
+                        '05cm8whq' /* Digital */,
+                      ),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Inter',
@@ -284,7 +297,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: AutoSizeText(
-                      'Digital',
+                      FFLocalizations.of(context).getText(
+                        'tv6kd5gz' /* Digital */,
+                      ),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Inter',
@@ -300,7 +315,9 @@ class _HeaderDesktopWidgetState extends State<HeaderDesktopWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: AutoSizeText(
-                      'Digital',
+                      FFLocalizations.of(context).getText(
+                        '08qyauxl' /* Digital */,
+                      ),
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         'Inter',

@@ -85,7 +85,9 @@ class _FicheArticleWidgetState extends State<FicheArticleWidget> {
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'M.lirs',
+                    FFLocalizations.of(context).getText(
+                      'n9jsy7vu' /* M.lirs */,
+                    ),
                     style: GoogleFonts.getFont(
                       'Inter',
                       fontWeight: FontWeight.w600,
@@ -112,7 +114,9 @@ class _FicheArticleWidgetState extends State<FicheArticleWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 5.0, 0.0, 5.0, 0.0),
                             child: Text(
-                              'Top P',
+                              FFLocalizations.of(context).getText(
+                                '3p2plzny' /* Top P */,
+                              ),
                               style: GoogleFonts.getFont(
                                 'Inter',
                                 color: FlutterFlowTheme.of(context)
@@ -133,7 +137,9 @@ class _FicheArticleWidgetState extends State<FicheArticleWidget> {
           Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
             child: AutoSizeText(
-              'Je répare votre chaudière dans la journée',
+              FFLocalizations.of(context).getText(
+                'axlzxvw6' /* Je répare votre chaudière dans... */,
+              ),
               maxLines: 2,
               style: GoogleFonts.getFont(
                 'Inter',
@@ -153,7 +159,9 @@ class _FicheArticleWidgetState extends State<FicheArticleWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 0.0, 0.0),
                 child: Text(
-                  '5.0',
+                  FFLocalizations.of(context).getText(
+                    'u199q9u2' /* 5.0 */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
                         fontSize: 16.0,
@@ -165,7 +173,9 @@ class _FicheArticleWidgetState extends State<FicheArticleWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(2.0, 5.0, 0.0, 0.0),
                 child: Text(
-                  '(244)',
+                  FFLocalizations.of(context).getText(
+                    '38zvx75z' /* (244) */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Inter',
                         fontSize: 16.0,
